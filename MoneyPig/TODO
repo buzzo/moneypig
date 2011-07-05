@@ -1,0 +1,18 @@
+High (!!!):
+- aumentar pixels no topo
+- outcome no dia 1 não é considerado. validar componente de date.
+- qual o proposito do 'total' em sumario e goal
+
+Low (!):
+- persistir sort.
+- testes!
+- criar helps.
+
+Future (?):
+- acrescentar language pt_br
+- clique sobre item da tabela de sumario
+  lista itens.
+- na listagem de sms filter, quando vazia mostrar
+  texto: "no sms filter".
+- database no cloud.
+  

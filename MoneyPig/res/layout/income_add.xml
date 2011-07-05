@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center_horizontal">
+	<!-- header -->
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:text="@string/income_add_header" android:gravity="center" android:layout_weight="1"
+			android:textSize="25dp" android:padding="3dp" android:paddingBottom="20dp" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/income_add_txt_date"
+			android:layout_width="130dip" android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip"
+			android:id="@+id/income_add_btn_date" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/income_add_txt_value"
+			android:layout_width="130dip" android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip"
+			android:id="@+id/income_add_btn_value" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/income_add_txt_labels"
+			android:layout_width="130dip" android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip"
+			android:id="@+id/income_add_btn_labels" android:text="@string/income_add_btn_labels" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/income_add_txt_descr"
+			android:layout_width="130dip" android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<EditText android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip"
+			android:id="@+id/income_add_descr" android:maxLength="64" />
+	</TableRow>
+
+	<!-- buttons -->
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="10dip" android:layout_marginRight="3dip" android:text="@string/income_add_btn_add"
+			android:id="@+id/income_add_btn_add" />
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:text="@string/income_add_btn_cancel"
+			android:id="@+id/income_add_btn_cancel" />
+	</TableRow>
+
+</TableLayout>

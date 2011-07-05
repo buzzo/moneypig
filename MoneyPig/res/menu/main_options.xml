@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/text" android:title="Text" />
+	<item android:id="@+id/t" android:title="t" android:icon="@drawable/icon_pig"/>
+</menu>

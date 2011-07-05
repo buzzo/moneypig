@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center_horizontal">
+
+	<!-- header -->
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:text="@string/sms_add_header" android:gravity="center" android:layout_weight="1"
+			android:textSize="25dp" android:padding="3dp" android:paddingBottom="20dp" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/sms_add_txt_name" android:layout_width="130dip"
+			android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<EditText android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip" android:id="@+id/sms_add_name" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/sms_add_txt_income_number"
+			android:layout_width="130dip" android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<EditText android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip"
+			android:id="@+id/sms_add_income_number" android:inputType="number" />
+	</TableRow>
+
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<TextView android:layout_height="wrap_content" android:text="@string/sms_add_txt_regexp_value"
+			android:layout_width="130dip" android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
+			android:layout_marginBottom="10dip" />
+		<EditText android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:layout_marginBottom="10dip"
+			android:id="@+id/sms_add_regexp_value" android:maxLength="64" />
+	</TableRow>
+
+	<!-- buttons -->
+	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="10dip" android:layout_marginRight="3dip" android:text="@string/sms_add_btn_add"
+			android:id="@+id/sms_add_btn_add" />
+		<Button android:layout_height="wrap_content" android:layout_width="130dip" android:gravity="center"
+			android:layout_marginLeft="3dip" android:layout_marginRight="10dip" android:text="@string/sms_add_btn_cancel"
+			android:id="@+id/sms_add_btn_cancel" />
+	</TableRow>
+
+</TableLayout>

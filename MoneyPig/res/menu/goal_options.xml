@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/goal_opts_select_month" android:title="@string/goal_opts_menu_select_month" android:icon="@drawable/goal_date_select" />
+	<item android:id="@+id/goal_opts_sort" android:title="@string/goal_opts_menu_sort_summary" android:icon="@drawable/sort_list" />
+</menu>

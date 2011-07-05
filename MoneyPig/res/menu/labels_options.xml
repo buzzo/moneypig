@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/labels_opts_add_label" android:title="@string/labels_opts_menu_add_label"
+		android:icon="@drawable/label_add" />
+	<item android:id="@+id/labels_opts_sort" android:title="@string/labels_opts_menu_sort_labels"
+		android:icon="@drawable/sort_list" />
+</menu>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="br.com.buzzo.moneypig"
+	android:versionCode="1" android:versionName="1.0">
+	<application android:icon="@drawable/icon_pig" android:label="@string/app_name">
+		<!-- android:debuggable="true" -->
+		<receiver android:name=".activity.sms.SMSReceiver" android:enabled="true">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+			</intent-filter>
+		</receiver>
+		<activity android:name=".Main" android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.expense.ExpenseList" />
+		<activity android:name=".activity.expense.IncomeAdd" />
+		<activity android:name=".activity.expense.IncomeEdit" />
+		<activity android:name=".activity.expense.OutcomeAdd" />
+		<activity android:name=".activity.expense.OutcomeEdit" />
+		<activity android:name=".activity.summary.SummaryTable" />
+		<activity android:name=".activity.goal.GoalTable" />
+		<activity android:name=".activity.label.LabelList" />
+		<activity android:name=".activity.sms.SMSList" />
+		<activity android:name=".activity.sms.SMSAdd" />
+		<activity android:name=".activity.sms.SMSExpense" />
+	</application>
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-sdk android:minSdkVersion="7" />
+</manifest> 

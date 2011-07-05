@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<TextView android:id="@+id/summary_table_header" android:layout_marginBottom="5dip" android:padding="5dip"
+		android:gravity="center_horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent" />
+	<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<TableLayout android:id="@+id/summary_table" android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:stretchColumns="0,1">
+			<TableRow>
+				<TextView android:layout_column="0" android:text="@string/summary_table_txt_label" android:padding="3dip" />
+				<TextView android:layout_column="1" android:text="@string/summary_table_txt_value" android:gravity="right"
+					android:padding="3dip" />
+			</TableRow>
+			<View android:layout_height="2dip" android:background="#FF909090" />
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>

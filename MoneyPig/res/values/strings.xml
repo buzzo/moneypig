@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Money Pig</string>
+
+	<string name="eula_title">License</string>
+	<string name="eula_accept">Accept</string>
+	<string name="eula_refuse">Refuse</string>
+
+	<string name="sms_list_header">SMS Filters</string>
+	<string name="sms_list_item_txt_name">Name</string>
+	<string name="sms_list_item_txt_income_number">Income Number</string>
+
+	<string name="sms_expense_title">Expense notification</string>
+	<string name="sms_expense_text">Notification match [%s] filter.</string>
+	<string name="sms_expense_msg_bar">New expense notification.</string>
+	<string name="sms_expense_header">Add Expense</string>
+	<string name="sms_expense_txt_add_labels">Labels:</string>
+	<string name="sms_expense_txt_value">Value:</string>
+	<string name="sms_expense_txt_descr">Description:</string>
+	<string name="sms_expense_txt_date">Date:</string>
+	<string name="sms_expense_btn_labels">Choose Labels</string>
+	<string name="sms_expense_btn_add_income">Add Income</string>
+	<string name="sms_expense_btn_add_outcome">Add Outcome</string>
+	<string name="sms_expense_msg_err_not_find_sms">Could not retrive SMS filter from database.</string>
+	<string name="sms_expense_msg_err_outcome">Invalid outcome.</string>
+	<string name="sms_expense_msg_err_income">Invalid income.</string>
+	<string name="sms_expense_msg_err_wrong_regex">Invalid regexp pattern.</string>
+	<string name="sms_expense_msg_err_no_value_match">Could not match value from filter regex.</string>
+	<string name="sms_expense_msg_err_parse_value">Could not parse value [%s] from SMS.</string>
+	<string name="sms_expense_msg_err_value_to_high">Value must not be higher than %f.</string>
+	<string name="sms_expense_msg_err_invalid_value">Invalid value %s.</string>
+	<string name="sms_expense_msg_suc_outcome_added">Outcome added.</string>
+	<string name="sms_expense_msg_suc_income_added">Income added.</string>
+
+	<string name="sms_add_header">Add SMS Filter</string>
+	<string name="sms_add_txt_name">Filter name:</string>
+	<string name="sms_add_txt_income_number">Income number:</string>
+	<string name="sms_add_txt_regexp_value">Regex for match value:</string>
+	<string name="sms_add_btn_add">Add</string>
+	<string name="sms_add_btn_cancel">Cancel</string>
+	<string name="sms_add_msg_sms_filter_added">SMS filter added successfully.</string>
+	<string name="sms_add_msg_err_invalid_income_number">Invalid income number. Use only digits.</string>
+	<string name="sms_add_msg_err_invalid_name_alread_exists">Invalid name [%s]. There is already a filter with this name.</string>
+
+	<string name="expense_list_item_date">Date:</string>
+	<string name="expense_list_item_value">Value:</string>
+	<string name="expense_list_item_descr">Description:</string>
+	<string name="expense_list_item_labels">Labels:</string>
+	<string name="expense_list_loading">Loading more items...</string>
+
+	<string name="income_edit_header">Edit Income</string>
+	<string name="income_edit_labels_edit_header">Choose Labels</string>
+	<string name="income_edit_value_header">Enter value</string>
+	<string name="income_edit_txt_date">Date:</string>
+	<string name="income_edit_txt_value">Value:</string>
+	<string name="income_edit_txt_descr">Description:</string>
+	<string name="income_edit_txt_labels">Labels:</string>
+	<string name="income_edit_btn_save">Save</string>
+	<string name="income_edit_btn_cancel">Cancel</string>
+	<string name="income_edit_btn_set">Set</string>
+	<string name="income_edit_btn_labels">Choose labels</string>
+	<string name="income_edit_msg_income_added">Income edited successfully.</string>
+	<string name="income_edit_msg_err_income">Invalid income.</string>
+	<string name="income_edit_msg_err_invalid_value">Invalid value %s.</string>
+	<string name="income_edit_msg_err_value_to_high">Value must not be higher than %f.</string>
+
+	<string name="income_add_header">Add Income</string>
+	<string name="income_add_labels_add_header">Choose Labels</string>
+	<string name="income_add_value_header">Enter value</string>
+	<string name="income_add_value">$ %s</string>
+	<string name="income_add_txt_value">Value:</string>
+	<string name="income_add_txt_descr">Description:</string>
+	<string name="income_add_txt_date">Date:</string>
+	<string name="income_add_txt_labels">Labels:</string>
+	<string name="income_add_btn_set">Set</string>
+	<string name="income_add_btn_cancel">Cancel</string>
+	<string name="income_add_btn_labels">Choose labels</string>
+	<string name="income_add_btn_add">Add</string>
+	<string name="income_add_msg_income_added">Income added.</string>
+	<string name="income_add_msg_err_income">Invalid income.</string>
+	<string name="income_add_msg_err_invalid_value">Invalid value %s.</string>
+	<string name="income_add_msg_err_value_to_high">Value must not be higher than %f.</string>
+
+	<string name="outcome_edit_header">Edit Outcome</string>
+	<string name="outcome_edit_labels_edit_header">Choose Labels</string>
+	<string name="outcome_edit_value_header">Enter value</string>
+	<string name="outcome_edit_txt_date">Date:</string>
+	<string name="outcome_edit_txt_value">Value:</string>
+	<string name="outcome_edit_txt_descr">Description:</string>
+	<string name="outcome_edit_txt_labels">Labels:</string>
+	<string name="outcome_edit_btn_save">Save</string>
+	<string name="outcome_edit_btn_cancel">Cancel</string>
+	<string name="outcome_edit_btn_set">Set</string>
+	<string name="outcome_edit_btn_labels">Choose labels</string>
+	<string name="outcome_edit_msg_outcome_added">Outcome edited successfully.</string>
+	<string name="outcome_edit_msg_err_outcome">Invalid outcome.</string>
+	<string name="outcome_edit_msg_err_invalid_value">Invalid value %s.</string>
+	<string name="outcome_edit_msg_err_value_to_high">Value must not be higher than %f.</string>
+
+	<string name="outcome_add_header">Add Outcome</string>
+	<string name="outcome_add_labels_add_header">Choose Labels</string>
+	<string name="outcome_add_value_header">Enter value</string>
+	<string name="outcome_add_value">$ %s</string>
+	<string name="outcome_add_txt_value">Value:</string>
+	<string name="outcome_add_txt_descr">Description:</string>
+	<string name="outcome_add_txt_date">Date:</string>
+	<string name="outcome_add_txt_labels">Labels:</string>
+	<string name="outcome_add_btn_set">Set</string>
+	<string name="outcome_add_btn_cancel">Cancel</string>
+	<string name="outcome_add_btn_labels">Choose labels</string>
+	<string name="outcome_add_btn_add">Add</string>
+	<string name="outcome_add_msg_outcome_added">Outcome added.</string>
+	<string name="outcome_add_msg_err_outcome">Invalid outcome.</string>
+	<string name="outcome_add_msg_err_invalid_value">Invalid value %s.</string>
+	<string name="outcome_add_msg_err_value_to_high">Value must not be higher than %f.</string>
+
+	<string name="label_add_header">Add new label</string>
+	<string name="label_add_txt_name">Label name:</string>
+	<string name="label_add_txt_goal">Goal:</string>
+	<string name="label_add_hint_name">label name</string>
+	<string name="label_add_btn_add">Add</string>
+	<string name="label_add_btn_cancel">Cancel</string>
+	<string name="label_add_msg_label_added">Label %s added.</string>
+	<string name="label_add_err_label_added">Label %s already exists.</string>
+	<string name="label_add_err_empty_name">Name must not be empty.</string>
+	<string name="label_add_err_name_length">Name length must not be greater then 16 chars.</string>
+	<string name="label_add_msg_err_value_to_high">Value must not be higher than %f.</string>
+	<string name="label_add_msg_err_invalid_value">Invalid value \'%s\'.</string>
+
+	<string name="label_edit_header">Edit label</string>
+	<string name="label_edit_txt_label_name">Label name:</string>
+	<string name="label_edit_btn_save">Save</string>
+	<string name="label_edit_btn_cancel">Cancel</string>
+	<string name="label_edit_msg_label_added">Label %s edit successfully.</string>
+	<string name="label_edit_err_label_added">Label %s already exists.</string>
+	<string name="label_edit_err_empty_name">Name must not be empty.</string>
+	<string name="label_edit_err_name_length">Name length must not be greater then 16 chars.</string>
+
+	<string name="label_list_sort_header">Sort type</string>
+	<string name="label_list_item_txt_name">Name:</string>
+	<string name="label_list_item_txt_goal">Goal:</string>
+	<string name="label_list_sort_btn_set">Set</string>
+	<string name="label_list_sort_btn_cancel">Cancel</string>
+
+	<string name="tab_summary_header">Summary</string>
+	<string name="tab_expenses_header">Expenses</string>
+	<string name="tab_labels_header">Labels</string>
+
+	<string name="labels_opts_menu_add_label">Add Label</string>
+	<string name="labels_opts_menu_sort_labels">Sort Labels</string>
+	<string name="labels_ctx_menu_header">Manage Label</string>
+	<string name="labels_ctx_menu_item_delete_msg_label_deleted">Label %s deleted successfully.</string>
+
+	<string name="expense_opts_menu_add_outcome">Add Outcome</string>
+	<string name="expense_opts_menu_add_income">Add Income</string>
+	<string name="expense_ctx_menu_header">Manage Expense</string>
+	<string name="expense_ctx_menu_item_delete_msg_expense_deleted">Expense deleted successfully.</string>
+
+	<string name="summary_opts_menu_sms_filters">SMS Filters</string>
+	<string name="summary_opts_menu_show_goals">Show Goals</string>
+	<string name="summary_opts_menu_select_month">Select Month</string>
+	<string name="summary_opts_menu_sort_summary">Sort Summary</string>
+	<string name="summary_table_txt_total">Total</string>
+	<string name="summary_table_txt_label">Label</string>
+	<string name="summary_table_txt_value">Value</string>
+	<string name="summary_sort_txt_header">Sort type</string>
+	<string name="summary_sort_btn_set">Set</string>
+	<string name="summary_sort_btn_cancel">Cancel</string>
+
+	<string name="goal_opts_menu_select_month">Select Month</string>
+	<string name="goal_opts_menu_sort_summary">Sort Summary</string>
+	<string name="goal_table_txt_total">Total</string>
+	<string name="goal_table_txt_label">Label</string>
+	<string name="goal_table_txt_value">Value</string>
+	<string name="goal_table_txt_goal">Goal</string>
+	<string name="goal_sort_txt_header">Sort type</string>
+	<string name="goal_sort_btn_set">Set</string>
+	<string name="goal_sort_btn_cancel">Cancel</string>
+
+	<string name="sms_opts_menu_add_sms">Add SMS Filter</string>
+	<string name="sms_ctx_menu_header">Manage SMS Filters</string>
+	<string name="sms_ctx_menu_item_delete_msg_sms_deleted">SMS filter deleted successfully.</string>
+
+	<string-array name="labels_dialog_sort">
+		<item>Alphabetic order</item>
+		<item>Last created first</item>
+	</string-array>
+
+	<string-array name="summary_dialog_sort">
+		<item>Alphabetic order</item>
+		<item>Greater value first</item>
+	</string-array>
+
+	<string-array name="goal_dialog_sort">
+		<item>Alphabetic order</item>
+		<item>Greater value first</item>
+	</string-array>
+
+	<string-array name="expenses_ctx_menu">
+		<item>Edit</item>
+		<item>Delete</item>
+	</string-array>
+
+	<string-array name="labels_ctx_menu">
+		<item>Edit</item>
+		<item>Delete</item>
+	</string-array>
+
+	<string-array name="sms_ctx_menu">
+		<item>Delete</item>
+	</string-array>
+
+	<!-- ******************************************************************* -->
+	<!-- Used for the date slider library -->
+	<!-- ******************************************************************* -->
+	<string name="dateSliderTitle">Selected date</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/summary_opts_sms_filters" android:title="@string/summary_opts_menu_sms_filters"
+		android:icon="@drawable/summary_sms" />
+	<item android:id="@+id/summary_opts_show_goals" android:title="@string/summary_opts_menu_show_goals" android:icon="@drawable/summary_goal" />
+	<item android:id="@+id/summary_opts_select_month" android:title="@string/summary_opts_menu_select_month"
+		android:icon="@drawable/summary_date_select" />
+	<item android:id="@+id/summary_opts_sort" android:title="@string/summary_opts_menu_sort_summary" android:icon="@drawable/sort_list" />
+</menu>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/sms_opts_add_sms" android:title="@string/sms_opts_menu_add_sms" android:icon="@drawable/sms_add" />
+</menu>
