@@ -15,7 +15,7 @@
 			android:layout_marginBottom="10dip" />
 		<EditText android:id="@+id/sms_expense_value" android:layout_height="wrap_content" android:layout_width="130dip"
 			android:gravity="right" android:layout_marginLeft="10dip" android:layout_marginRight="3dip"
-			android:layout_marginBottom="10dip" />
+			android:layout_marginBottom="10dip" android:inputType="numberDecimal" />
 	</TableRow>
 
 	<TableRow android:layout_width="fill_parent" android:gravity="center_horizontal">
