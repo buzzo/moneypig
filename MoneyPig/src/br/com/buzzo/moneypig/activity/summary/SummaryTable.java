@@ -15,6 +15,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -121,10 +122,21 @@ public class SummaryTable extends Activity {
     }
 
     private FetchRestriction<Summary> getDateRestriction() {
-        this.cal.set(Calendar.DATE, this.cal.getActualMinimum(Calendar.DATE));
-        final long begin = this.cal.getTimeInMillis();
-        this.cal.set(Calendar.DATE, this.cal.getActualMaximum(Calendar.DATE));
-        final long end = this.cal.getTimeInMillis();
+        // clone the Calendar instance
+        final Calendar localCal = Calendar.getInstance();
+        localCal.setTimeInMillis(this.cal.getTimeInMillis());
+        // clear fields
+        int year = localCal.get(Calendar.YEAR);
+        int month = localCal.get(Calendar.MONTH);
+        int day = localCal.get(Calendar.DATE);
+        localCal.clear();
+        localCal.set(year, month, day);
+        // go to the first day of this month (always 1)
+        localCal.set(Calendar.DAY_OF_MONTH, localCal.getActualMinimum(Calendar.DAY_OF_MONTH));
+        final long begin = localCal.getTimeInMillis();
+        // then goes to the first day of the next month
+        localCal.set(Calendar.MONTH, localCal.get(Calendar.MONTH) + 1);
+        final long end = localCal.getTimeInMillis();
         return new SummaryDateRestriction(begin, end, true);
     }
 
@@ -210,6 +222,9 @@ public class SummaryTable extends Activity {
 
     private void restoreTableView() {
         final TextView header = (TextView) findViewById(R.id.summary_table_header);
+
+        Log.i("SummaryTable", "Header:" + new SimpleDateFormat("hh:mm:ss - dd MMMM yyyy", Locale.getDefault()).format(this.cal.getTime()));
+
         header.setText(new SimpleDateFormat(SummaryTable.HEADER_DATE_FORMAT, Locale.getDefault()).format(this.cal.getTime()));
         for (final TableRow row : this.rows) {
             this.table.addView(row, new TableLayout.LayoutParams());
