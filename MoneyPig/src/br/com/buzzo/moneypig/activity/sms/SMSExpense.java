@@ -43,7 +43,6 @@ public class SMSExpense extends Activity {
     public static final int    DIALOG_DATE_ID   = 1;
 
     private final List<Label>  checked          = new ArrayList<Label>();
-    private double             value;
 
     private Date               date;
 
@@ -152,24 +151,20 @@ public class SMSExpense extends Activity {
             }
 
             private Double getValue() {
-                if (SMSExpense.this.value == 0) {
-                    final EditText valueTxt = (EditText) findViewById(R.id.sms_expense_value);
-                    final String value = valueTxt.getText().toString();
-                    try {
-                        final double val = ExpenseList.NF.parse(value).doubleValue();
-                        if (val > Expense.MAX_VAL) {
-                            Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_value_to_high, Expense.MAX_VAL),
-                                    Toast.LENGTH_LONG).show();
-                            return null;
-                        }
-                        return val;
-                    } catch (final ParseException e) {
-                        Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_invalid_value, value), Toast.LENGTH_SHORT)
-                                .show();
+                final EditText valueTxt = (EditText) findViewById(R.id.sms_expense_value);
+                final String value = valueTxt.getText().toString();
+                try {
+                    final double val = ExpenseList.NF.parse(value).doubleValue();
+                    if (val > Expense.MAX_VAL) {
+                        Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_value_to_high, Expense.MAX_VAL),
+                                Toast.LENGTH_LONG).show();
                         return null;
                     }
-                } else {
-                    return SMSExpense.this.value;
+                    return val;
+                } catch (final ParseException e) {
+                    Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_invalid_value, value), Toast.LENGTH_SHORT)
+                            .show();
+                    return null;
                 }
             }
         });
@@ -201,24 +196,20 @@ public class SMSExpense extends Activity {
             }
 
             private Double getValue() {
-                if (SMSExpense.this.value == 0) {
-                    final EditText valueTxt = (EditText) findViewById(R.id.sms_expense_value);
-                    final String value = valueTxt.getText().toString();
-                    try {
-                        final double val = ExpenseList.NF.parse(value).doubleValue();
-                        if (val > Expense.MAX_VAL) {
-                            Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_value_to_high, Expense.MAX_VAL),
-                                    Toast.LENGTH_LONG).show();
-                            return null;
-                        }
-                        return val;
-                    } catch (final ParseException e) {
-                        Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_invalid_value, value), Toast.LENGTH_SHORT)
-                                .show();
+                final EditText valueTxt = (EditText) findViewById(R.id.sms_expense_value);
+                final String value = valueTxt.getText().toString();
+                try {
+                    final double val = ExpenseList.NF.parse(value).doubleValue();
+                    if (val > Expense.MAX_VAL) {
+                        Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_value_to_high, Expense.MAX_VAL),
+                                Toast.LENGTH_LONG).show();
                         return null;
                     }
-                } else {
-                    return SMSExpense.this.value;
+                    return val;
+                } catch (final ParseException e) {
+                    Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_invalid_value, value), Toast.LENGTH_SHORT)
+                            .show();
+                    return null;
                 }
             }
         });
@@ -246,27 +237,28 @@ public class SMSExpense extends Activity {
         }
         final SMS sms = list.get(0);
         final String message = getIntent().getStringExtra(SMSExpense.SMS_MESSAGE);
+        double value;
         try {
             final Matcher m = Pattern.compile(sms.getRegexp()).matcher(message);
             if (!m.find()) {
                 Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_no_value_match), Toast.LENGTH_LONG).show();
-                this.value = 0;
+                value = 0;
             } else {
                 final String valueStr = m.group();
                 try {
-                    this.value = ExpenseList.NF.parse(valueStr).doubleValue();
+                    value = ExpenseList.NF.parse(valueStr).doubleValue();
                 } catch (final ParseException e) {
                     Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_parse_value, valueStr), Toast.LENGTH_LONG)
                             .show();
-                    this.value = 0;
+                    value = 0;
                 }
             }
         } catch (final PatternSyntaxException e) {
             Toast.makeText(SMSExpense.this, getString(R.string.sms_expense_msg_err_wrong_regex), Toast.LENGTH_LONG).show();
-            this.value = 0;
+            value = 0;
         }
         final EditText valueTxt = (EditText) findViewById(R.id.sms_expense_value);
-        valueTxt.setText(ExpenseList.NF.format(this.value));
+        valueTxt.setText(ExpenseList.NF.format(value));
     }
 
     private void updateDateDisplay() {
