@@ -10,7 +10,7 @@ import br.com.buzzo.moneypig.db.ent.SMSRepository;
 
 public abstract class Repository extends SQLiteOpenHelper {
     private static final String DATABASE_NAME    = "moneypig.db";
-    private static final int    DATABASE_VERSION = 1;
+    private static final int    DATABASE_VERSION = 3;
 
     private final Context       ctx;
 
