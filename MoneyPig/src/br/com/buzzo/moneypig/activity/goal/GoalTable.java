@@ -41,11 +41,11 @@ public class GoalTable extends Activity {
 
     private Calendar             cal;
 
-    private float                total;
+    // private float total;
     private final List<TableRow> rows                = new ArrayList<TableRow>();
 
     private View                 separator;
-    private TableRow             footer;
+    // private TableRow footer;
     private TableLayout          table;
 
     @Override
@@ -95,15 +95,15 @@ public class GoalTable extends Activity {
 
     private void cleanTableFooter() {
         this.table.removeView(this.separator);
-        this.footer.removeAllViews();
-        this.table.removeView(this.footer);
+        // this.footer.removeAllViews();
+        // this.table.removeView(this.footer);
     }
 
     private void cleanTableView() {
         for (final TableRow r : GoalTable.this.rows) {
             this.table.removeView(r);
         }
-        this.total = 0;
+        // this.total = 0;
         this.rows.clear();
     }
 
@@ -155,7 +155,7 @@ public class GoalTable extends Activity {
         setContentView(R.layout.goal_table);
         this.cal = Calendar.getInstance();
         this.table = (TableLayout) findViewById(R.id.goal_table);
-        this.footer = new TableRow(this);
+        // this.footer = new TableRow(this);
         this.separator = new View(this);
         this.separator.setBackgroundColor(Color.parseColor("#FF909090"));
         refreshTable();
@@ -170,25 +170,25 @@ public class GoalTable extends Activity {
     }
 
     private void restoreFooter() {
-        final TextView label = new TextView(this);
-        label.setText(getString(R.string.goal_table_txt_total));
-        label.setPadding(3, 3, 3, 3);
-        this.footer.addView(label, new TableRow.LayoutParams(0));
+        // final TextView label = new TextView(this);
+        // label.setText(getString(R.string.goal_table_txt_total));
+        // label.setPadding(3, 3, 3, 3);
+        // this.footer.addView(label, new TableRow.LayoutParams(0));
 
-        final TextView value = new TextView(this);
-        value.setText(String.valueOf(this.total));
-        value.setPadding(3, 3, 3, 3);
-        value.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
-        this.footer.addView(value, new TableRow.LayoutParams(1));
-
-        final TextView goal = new TextView(this);
-        goal.setText(String.valueOf(this.total));
-        goal.setPadding(3, 3, 3, 3);
-        goal.setGravity(Gravity.RIGHT | Gravity.TOP);
-        this.footer.addView(goal, new TableRow.LayoutParams(1));
-
+        // final TextView value = new TextView(this);
+        // value.setText(String.valueOf(this.total));
+        // value.setPadding(3, 3, 3, 3);
+        // value.setGravity(Gravity.CENTER_HORIZONTAL | Gravity.TOP);
+        // this.footer.addView(value, new TableRow.LayoutParams(1));
+        //
+        // final TextView goal = new TextView(this);
+        // goal.setText(String.valueOf(this.total));
+        // goal.setPadding(3, 3, 3, 3);
+        // goal.setGravity(Gravity.RIGHT | Gravity.TOP);
+        // this.footer.addView(goal, new TableRow.LayoutParams(1));
+        //
         this.table.addView(this.separator, new TableLayout.LayoutParams(android.view.ViewGroup.LayoutParams.FILL_PARENT, 2));
-        this.table.addView(this.footer, new TableLayout.LayoutParams());
+        // this.table.addView(this.footer, new TableLayout.LayoutParams());
     }
 
     private void restoreTableData() {
@@ -222,7 +222,7 @@ public class GoalTable extends Activity {
             row.addView(goalTxt, new TableRow.LayoutParams(2));
 
             this.rows.add(row);
-            this.total += summary.getSum();
+            // this.total += summary.getSum();
         }
     }
 

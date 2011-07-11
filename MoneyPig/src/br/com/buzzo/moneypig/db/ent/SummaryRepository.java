@@ -93,7 +93,7 @@ public class SummaryRepository extends Repository {
         @Override
         public int compare(final Summary sum1, final Summary sum2) {
             // TODO uses just the first label. Must change if we accept more than one label in summary.
-            return new Float(sum2.getSum() - sum1.getSum()).intValue();
+            return new Float(sum1.getSum() - sum2.getSum()).intValue();
         }
     }
 

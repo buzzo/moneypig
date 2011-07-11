@@ -1,9 +1,9 @@
 High (!!!):
 - aumentar pixels no topo
-- outcome no dia 1 não é considerado. validar componente de date.
-- qual o proposito do 'total' em sumario e goal
 
 Low (!):
+- ordenar lista de labels quando for escolher para marcar em addSMS ou addIncome/Outcome (usar fequencia de uso)
+- diferenciar com cores alternadas as linhas das tabelas
 - persistir sort.
 - testes!
 - criar helps.
