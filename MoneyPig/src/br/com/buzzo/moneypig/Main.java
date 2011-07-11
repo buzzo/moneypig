@@ -25,6 +25,7 @@ public class Main extends TabActivity {
         LayoutInflater.from(this).inflate(R.layout.main_tabs, tabHost.getTabContentView(), true);
         // summary
         tabHost.addTab(tabHost.newTabSpec(getString(R.string.tab_summary_header))
+                // getLayoutInflater().inflate(R.layout.tab_summary, null)
                 .setIndicator(getString(R.string.tab_summary_header), getResources().getDrawable(R.drawable.tab_summary))
                 .setContent(new Intent(this, SummaryTable.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)));
         // expenses

@@ -112,9 +112,9 @@ public class GoalTable extends Activity {
         final Calendar localCal = Calendar.getInstance();
         localCal.setTimeInMillis(this.cal.getTimeInMillis());
         // clear fields
-        int year = localCal.get(Calendar.YEAR);
-        int month = localCal.get(Calendar.MONTH);
-        int day = localCal.get(Calendar.DATE);
+        final int year = localCal.get(Calendar.YEAR);
+        final int month = localCal.get(Calendar.MONTH);
+        final int day = localCal.get(Calendar.DATE);
         localCal.clear();
         localCal.set(year, month, day);
         // go to the first day of this month (always 1)
@@ -195,9 +195,16 @@ public class GoalTable extends Activity {
         // pois o método list exige generics
         @SuppressWarnings("unchecked")
         final List<Summary> summaries = Summary.repository(this).list(GoalTable.sort.getSorter(), getDateRestriction());
+        int counter = 0;
         for (final Summary summary : summaries) {
             final TableRow row = new TableRow(this);
 
+            if (counter % 2 == 0) {
+                row.setBackgroundColor(Color.parseColor("#FF303030"));
+            } else {
+                row.setBackgroundColor(Color.parseColor("#FF202020"));
+            }
+            
             final TextView label = new TextView(this);
             // TODO: fixada apenas um label por linha
             label.setText(summary.getLabels().get(0).getName());
@@ -222,6 +229,7 @@ public class GoalTable extends Activity {
             row.addView(goalTxt, new TableRow.LayoutParams(2));
 
             this.rows.add(row);
+            counter++;
             // this.total += summary.getSum();
         }
     }

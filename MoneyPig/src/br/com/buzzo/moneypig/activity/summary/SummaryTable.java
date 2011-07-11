@@ -45,11 +45,11 @@ public class SummaryTable extends Activity {
 
     private Calendar             cal;
 
-//    private float                total;
+    // private float total;
     private final List<TableRow> rows                = new ArrayList<TableRow>();
 
     private View                 separator;
-//    private TableRow             footer;
+    // private TableRow footer;
     private TableLayout          table;
 
     @Override
@@ -109,15 +109,15 @@ public class SummaryTable extends Activity {
 
     private void cleanTableFooter() {
         this.table.removeView(this.separator);
-//        this.footer.removeAllViews();
-//        this.table.removeView(this.footer);
+        // this.footer.removeAllViews();
+        // this.table.removeView(this.footer);
     }
 
     private void cleanTableView() {
         for (final TableRow r : SummaryTable.this.rows) {
             this.table.removeView(r);
         }
-//        this.total = 0;
+        // this.total = 0;
         this.rows.clear();
     }
 
@@ -126,9 +126,9 @@ public class SummaryTable extends Activity {
         final Calendar localCal = Calendar.getInstance();
         localCal.setTimeInMillis(this.cal.getTimeInMillis());
         // clear fields
-        int year = localCal.get(Calendar.YEAR);
-        int month = localCal.get(Calendar.MONTH);
-        int day = localCal.get(Calendar.DATE);
+        final int year = localCal.get(Calendar.YEAR);
+        final int month = localCal.get(Calendar.MONTH);
+        final int day = localCal.get(Calendar.DATE);
         localCal.clear();
         localCal.set(year, month, day);
         // go to the first day of this month (always 1)
@@ -169,7 +169,7 @@ public class SummaryTable extends Activity {
         setContentView(R.layout.summary_table);
         this.cal = Calendar.getInstance();
         this.table = (TableLayout) findViewById(R.id.summary_table);
-//        this.footer = new TableRow(this);
+        // this.footer = new TableRow(this);
         this.separator = new View(this);
         this.separator.setBackgroundColor(Color.parseColor("#FF909090"));
         refreshTable();
@@ -184,27 +184,33 @@ public class SummaryTable extends Activity {
     }
 
     private void restoreFooter() {
-//        final TextView label = new TextView(this);
-//        label.setText(getString(R.string.summary_table_txt_total));
-//        label.setPadding(3, 3, 3, 3);
-//        final TextView shortcut = new TextView(this);
-//        shortcut.setText(String.valueOf(this.total));
-//        shortcut.setPadding(3, 3, 3, 3);
-//        shortcut.setGravity(Gravity.RIGHT | Gravity.TOP);
-//
-//        this.footer.addView(label, new TableRow.LayoutParams(0));
-//        this.footer.addView(shortcut, new TableRow.LayoutParams(1));
+        // final TextView label = new TextView(this);
+        // label.setText(getString(R.string.summary_table_txt_total));
+        // label.setPadding(3, 3, 3, 3);
+        // final TextView shortcut = new TextView(this);
+        // shortcut.setText(String.valueOf(this.total));
+        // shortcut.setPadding(3, 3, 3, 3);
+        // shortcut.setGravity(Gravity.RIGHT | Gravity.TOP);
+        //
+        // this.footer.addView(label, new TableRow.LayoutParams(0));
+        // this.footer.addView(shortcut, new TableRow.LayoutParams(1));
 
         this.table.addView(this.separator, new TableLayout.LayoutParams(android.view.ViewGroup.LayoutParams.FILL_PARENT, 2));
-//        this.table.addView(this.footer, new TableLayout.LayoutParams());
+        // this.table.addView(this.footer, new TableLayout.LayoutParams());
     }
 
     private void restoreTableData() {
         // pois o método list exige generics
         @SuppressWarnings("unchecked")
         final List<Summary> summaries = Summary.repository(this).list(SummaryTable.sort.getSorter(), getDateRestriction());
+        int counter = 0;
         for (final Summary summary : summaries) {
             final TableRow row = new TableRow(this);
+            if (counter % 2 == 0) {
+                row.setBackgroundColor(Color.parseColor("#FF303030"));
+            } else {
+                row.setBackgroundColor(Color.parseColor("#FF202020"));
+            }
             final TextView label = new TextView(this);
             // TODO: fixada apenas um label por linha
             label.setText(summary.getLabels().get(0).getName());
@@ -216,7 +222,8 @@ public class SummaryTable extends Activity {
             row.addView(label, new TableRow.LayoutParams(0));
             row.addView(shortcut, new TableRow.LayoutParams(1));
             this.rows.add(row);
-//            this.total += summary.getSum();
+            counter++;
+            // this.total += summary.getSum();
         }
     }
 

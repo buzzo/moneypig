@@ -3,7 +3,7 @@ High (!!!):
 
 Low (!):
 - ordenar lista de labels quando for escolher para marcar em addSMS ou addIncome/Outcome (usar fequencia de uso)
-- diferenciar com cores alternadas as linhas das tabelas
+- acrescentar regex na linha do list sms.
 - persistir sort.
 - testes!
 - criar helps.
